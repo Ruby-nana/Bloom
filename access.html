@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bloom（ブルーム）へのアクセス・店舗情報。渋谷区神宮前、原宿駅から徒歩5分の好立地です。">
+  <title>アクセス | Bloom Beauty Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .shop-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .shop-info__map {
+      aspect-ratio: 1/1;
+      max-height: 450px;
+      background-color: var(--color-sub);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .shop-info__map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .shop-info__details {
+      padding: 20px 0;
+    }
+
+    .shop-info__table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .shop-info__table th,
+    .shop-info__table td {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--color-sub);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .shop-info__table th {
+      width: 120px;
+      color: var(--color-main);
+      font-weight: 600;
+    }
+
+    .shop-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 60px;
+    }
+
+    .shop-gallery__item {
+      aspect-ratio: 4/3;
+      background-color: var(--color-sub);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-main);
+    }
+
+    .directions {
+      background-color: var(--color-white);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      margin-top: 60px;
+    }
+
+    .directions__title {
+      font-size: 2rem;
+      color: var(--color-main);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .directions__list {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .directions__item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px dashed var(--color-sub);
+    }
+
+    .directions__item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .directions__number {
+      width: 30px;
+      height: 30px;
+      background-color: var(--color-main);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .directions__text {
+      line-height: 1.8;
+    }
+
+    @media screen and (max-width: 768px) {
+      .shop-info {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .shop-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .directions {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        Bloom
+        <span>Beauty Salon</span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">ホーム</a></li>
+          <li><a href="menu.html" class="nav__link">メニュー</a></li>
+          <li><a href="staff.html" class="nav__link">スタッフ</a></li>
+          <li><a href="access.html" class="nav__link active">アクセス</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <h1 class="page-header__title">Access</h1>
+      <p class="page-header__subtitle">アクセス・店舗情報</p>
+    </section>
+
+    <!-- Shop Info Section -->
+    <section class="section">
+      <div class="container">
+        <div class="shop-info">
+          <div class="shop-info__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.169449699498!2d139.70258131525882!3d35.67046098019432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca3c4e4e4e5%3A0x5c0e3c6e3c6e3c6e!2z5p2x5Lqs6YO95riL6LC35Yy656We5a6u5YmNMS0yLTM!5e0!3m2!1sja!2sjp!4v1234567890!5m2!1sja!2sjp"
+              allowfullscreen="" loading="lazy" title="Bloom店舗所在地">
+            </iframe>
+          </div>
+          <div class="shop-info__details">
+            <table class="shop-info__table">
+              <tr>
+                <th>店舗名</th>
+                <td>Bloom（ブルーム）</td>
+              </tr>
+              <tr>
+                <th>住所</th>
+                <td>
+                  〒150-0001<br>
+                  東京都渋谷区神宮前1-2-3<br>
+                  〇〇ビル 2F
+                </td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td><a href="tel:03-1234-5678">03-1234-5678</a></td>
+              </tr>
+              <tr>
+                <th>営業時間</th>
+                <td>10:00〜20:00<br><span style="font-size: 1.3rem; color: #888;">（最終受付 18:30）</span></td>
+              </tr>
+              <tr>
+                <th>定休日</th>
+                <td>毎週火曜日<br><span style="font-size: 1.3rem; color: #888;">（祝日の場合は営業、翌水曜休み）</span></td>
+              </tr>
+              <tr>
+                <th>アクセス</th>
+                <td>
+                  JR山手線「原宿駅」竹下口より徒歩5分<br>
+                  東京メトロ「明治神宮前駅」5番出口より徒歩3分
+                </td>
+              </tr>
+              <tr>
+                <th>駐車場</th>
+                <td>なし<br><span style="font-size: 1.3rem; color: #888;">（近隣のコインパーキングをご利用ください）</span></td>
+              </tr>
+              <tr>
+                <th>お支払い</th>
+                <td>現金 / クレジットカード / 電子マネー / QRコード決済</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Directions -->
+        <div class="directions">
+          <h2 class="directions__title">原宿駅からの道順</h2>
+          <div class="directions__list">
+            <div class="directions__item">
+              <span class="directions__number">1</span>
+              <p class="directions__text">JR原宿駅の竹下口改札を出て、右方向へ進みます。</p>
+            </div>
+            <div class="directions__item">
+              <span class="directions__number">2</span>
+              <p class="directions__text">竹下通りを直進し、約200m進んだところにある最初の信号を左折します。</p>
+            </div>
+            <div class="directions__item">
+              <span class="directions__number">3</span>
+              <p class="directions__text">左折後、50mほど進むと右手にカフェが見えます。そのカフェの隣のビルの2階が当店です。</p>
+            </div>
+            <div class="directions__item">
+              <span class="directions__number">4</span>
+              <p class="directions__text">ビル入口の階段を上がり、2階の奥の扉が当店の入口となります。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shop Gallery -->
+        <div class="shop-gallery">
+          <div class="shop-gallery__item">
+            <img src="images/bloom.jpeg" alt="店内写真 1"
+              style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+          </div>
+          <div class="shop-gallery__item">
+            <img src="images/concept.jpeg" alt="店内写真 2"
+              style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+          </div>
+          <div class="shop-gallery__item">
+            <img src="images/bloom4.jpeg" alt="店内写真 3"
+              style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section--bg">
+      <div class="container">
+        <div class="section__title">
+          <span class="section__title-en">Reservation</span>
+          <span class="section__title-ja">ご予約</span>
+        </div>
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+          <p style="margin-bottom: 30px; line-height: 2;">
+            ご予約はお電話にて承っております。<br>
+            当日のご予約もお気軽にお問い合わせください。
+          </p>
+          <p style="font-size: 3.6rem; color: var(--color-accent); font-weight: 600; margin-bottom: 10px;">
+            <a href="tel:03-1234-5678" style="color: inherit;">03-1234-5678</a>
+          </p>
+          <p style="font-size: 1.4rem; color: var(--color-text); opacity: 0.8;">
+            受付時間: 10:00〜19:00（火曜定休）
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__about">
+        <div class="footer__logo">Bloom</div>
+        <div class="footer__info">
+          <p>〒150-0001</p>
+          <p>東京都渋谷区神宮前1-2-3</p>
+          <p>TEL: 03-1234-5678</p>
+          <p>営業時間: 10:00〜20:00</p>
+          <p>定休日: 毎週火曜日</p>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <h3 class="footer__nav-title">Menu</h3>
+        <ul class="footer__nav-list">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="menu.html">メニュー・料金</a></li>
+          <li><a href="staff.html">スタッフ紹介</a></li>
+          <li><a href="access.html">アクセス</a></li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <h3 class="footer__nav-title">Follow Us</h3>
+        <div class="footer__sns">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="LINE">LINE</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer__copyright">&copy; 2024 Bloom Beauty Salon. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    const navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+
+</html>

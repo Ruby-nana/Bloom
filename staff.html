@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bloom（ブルーム）のスタッフ紹介。経験豊富なスタイリストがお客様の魅力を引き出します。">
+  <title>スタッフ紹介 | Bloom Beauty Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .staff-detail {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 40px;
+      padding: 40px;
+      background-color: var(--color-white);
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+    }
+    .staff-detail__image {
+      width: 300px;
+      height: 350px;
+      background-color: var(--color-sub);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-main);
+    }
+    .staff-detail__info {
+      padding: 20px 0;
+    }
+    .staff-detail__name {
+      font-size: 2.8rem;
+      margin-bottom: 5px;
+    }
+    .staff-detail__name-en {
+      font-size: 1.4rem;
+      color: var(--color-accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 15px;
+    }
+    .staff-detail__role {
+      display: inline-block;
+      padding: 5px 15px;
+      background-color: var(--color-main);
+      color: var(--color-white);
+      font-size: 1.2rem;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .staff-detail__career {
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      color: var(--color-text);
+      opacity: 0.8;
+    }
+    .staff-detail__message {
+      line-height: 2;
+      margin-bottom: 20px;
+    }
+    .staff-detail__skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .staff-detail__skill {
+      padding: 5px 15px;
+      background-color: var(--color-sub);
+      font-size: 1.3rem;
+      border-radius: 3px;
+    }
+    @media screen and (max-width: 768px) {
+      .staff-detail {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+      .staff-detail__image {
+        width: 100%;
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        Bloom
+        <span>Beauty Salon</span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">ホーム</a></li>
+          <li><a href="menu.html" class="nav__link">メニュー</a></li>
+          <li><a href="staff.html" class="nav__link active">スタッフ</a></li>
+          <li><a href="access.html" class="nav__link">アクセス</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <h1 class="page-header__title">Staff</h1>
+      <p class="page-header__subtitle">スタッフ紹介</p>
+    </section>
+
+    <!-- Staff Content -->
+    <section class="section">
+      <div class="container">
+        <p style="text-align: center; margin-bottom: 50px;">
+          Bloomでは、経験豊富なスタイリストがお客様一人ひとりに寄り添い、<br>
+          最適なスタイルをご提案いたします。
+        </p>
+
+        <!-- Staff 1 -->
+        <div class="staff-detail">
+          <div class="staff-detail__image">
+            <img src="images/misa.jpeg" alt="伊藤 美彩" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+          </div>
+          <div class="staff-detail__info">
+            <h2 class="staff-detail__name">伊藤 美彩</h2>
+            <p class="staff-detail__name-en">Ito Misa</p>
+            <span class="staff-detail__role">Owner / Top Stylist</span>
+            <p class="staff-detail__career">美容師歴 15年</p>
+            <p class="staff-detail__message">
+              Bloomのオーナーを務めております伊藤美彩です。都内の有名サロンで10年以上経験を積み、2020年にBloomをオープンしました。<br><br>
+              「お客様が毎日鏡を見るのが楽しくなるような髪型」をモットーに、その方の骨格やライフスタイル、髪質に合わせた最適なスタイルをご提案いたします。<br><br>
+              忙しい日常の中で、サロンでの時間が特別なリラックスタイムになるよう、スタッフ一同心を込めておもてなしいたします。
+            </p>
+            <div class="staff-detail__skills">
+              <span class="staff-detail__skill">ショートカット</span>
+              <span class="staff-detail__skill">大人カラー</span>
+              <span class="staff-detail__skill">髪質改善</span>
+              <span class="staff-detail__skill">白髪ぼかし</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Staff 2 -->
+        <div class="staff-detail">
+          <div class="staff-detail__image">
+            <img src="images/yui.jpeg" alt="佐藤 結衣" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+          </div>
+          <div class="staff-detail__info">
+            <h2 class="staff-detail__name">佐藤 結衣</h2>
+            <p class="staff-detail__name-en">Yui Sato</p>
+            <span class="staff-detail__role">Stylist</span>
+            <p class="staff-detail__career">美容師歴 8年</p>
+            <p class="staff-detail__message">
+              スタイリストの佐藤結衣です。お客様との会話を大切にし、なりたいイメージをしっかりとヒアリングすることを心がけています。<br><br>
+              トレンドを取り入れながらも、お客様のライフスタイルに馴染むスタイルをご提案します。特にカラーが得意で、肌の色や雰囲気に合わせた色味をご提案いたします。<br><br>
+              初めての方も、ぜひお気軽にご相談ください。一緒に素敵なスタイルを見つけましょう！
+            </p>
+            <div class="staff-detail__skills">
+              <span class="staff-detail__skill">トレンドカラー</span>
+              <span class="staff-detail__skill">ハイライト</span>
+              <span class="staff-detail__skill">韓国風スタイル</span>
+              <span class="staff-detail__skill">ロングヘア</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Staff 3 -->
+        <div class="staff-detail">
+          <div class="staff-detail__image">
+            <img src="images/ai.jpeg" alt="鈴木 愛" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+          </div>
+          <div class="staff-detail__info">
+            <h2 class="staff-detail__name">鈴木 愛</h2>
+            <p class="staff-detail__name-en">Ai Suzuki</p>
+            <span class="staff-detail__role">Stylist</span>
+            <p class="staff-detail__career">美容師歴 5年</p>
+            <p class="staff-detail__message">
+              スタイリストの鈴木愛です。丁寧なカウンセリングを心がけ、お客様のお悩みに寄り添った施術をいたします。<br><br>
+              「髪のダメージが気になる」「自分に似合うスタイルがわからない」といったお悩みも、お気軽にご相談ください。一緒に解決策を見つけていきましょう。<br><br>
+              ヘッドスパも得意としておりますので、日頃の疲れを癒しにいらしてください。
+            </p>
+            <div class="staff-detail__skills">
+              <span class="staff-detail__skill">ヘッドスパ</span>
+              <span class="staff-detail__skill">ダメージケア</span>
+              <span class="staff-detail__skill">ナチュラルスタイル</span>
+              <span class="staff-detail__skill">ボブ</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Recruit Section -->
+    <section class="section section--bg">
+      <div class="container">
+        <div class="section__title">
+          <span class="section__title-en">Recruit</span>
+          <span class="section__title-ja">採用情報</span>
+        </div>
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+          <p style="margin-bottom: 30px; line-height: 2;">
+            Bloomでは、一緒に働くスタッフを募集しています。<br>
+            お客様に寄り添い、成長したいという想いのある方、<br>
+            ぜひお気軽にお問い合わせください。
+          </p>
+          <a href="tel:03-1234-5678" class="btn">お問い合わせ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__about">
+        <div class="footer__logo">Bloom</div>
+        <div class="footer__info">
+          <p>〒150-0001</p>
+          <p>東京都渋谷区神宮前1-2-3</p>
+          <p>TEL: 03-1234-5678</p>
+          <p>営業時間: 10:00〜20:00</p>
+          <p>定休日: 毎週火曜日</p>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <h3 class="footer__nav-title">Menu</h3>
+        <ul class="footer__nav-list">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="menu.html">メニュー・料金</a></li>
+          <li><a href="staff.html">スタッフ紹介</a></li>
+          <li><a href="access.html">アクセス</a></li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <h3 class="footer__nav-title">Follow Us</h3>
+        <div class="footer__sns">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="LINE">LINE</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer__copyright">&copy; 2024 Bloom Beauty Salon. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    const navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

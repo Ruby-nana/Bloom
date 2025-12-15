@@ -1,0 +1,9 @@
+# AI設定ファイル（非公開）
+CLAUDE.md
+.agent/
+.claude/
+
+# その他
+.DS_Store
+Thumbs.db
+*.log

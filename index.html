@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bloom（ブルーム）は大人の女性のための癒しの美容室。渋谷区神宮前で上質なヘアサービスをご提供いたします。">
+  <title>Bloom | 大人の女性のための癒しの美容室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        Bloom
+        <span>Beauty Salon</span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link active">ホーム</a></li>
+          <li><a href="menu.html" class="nav__link">メニュー</a></li>
+          <li><a href="staff.html" class="nav__link">スタッフ</a></li>
+          <li><a href="access.html" class="nav__link">アクセス</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/bloom.jpeg" alt="Bloom 美容室イメージ1">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/bloom2.jpeg" alt="Bloom 美容室イメージ2">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/bloom3.jpeg" alt="Bloom 美容室イメージ3">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/bloom4.jpeg" alt="Bloom 美容室イメージ4">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section class="section concept-section">
+      <div class="container">
+        <div class="section__title section__title--watermark">
+          <span class="section__title-watermark">Concept</span>
+          <span class="section__title-main">コンセプト</span>
+        </div>
+        <div class="concept__content">
+          <div class="concept__image">
+            <img src="images/concept.jpeg" alt="Bloomのコンセプト">
+          </div>
+          <div class="concept__text">
+            <p>Bloomは、忙しい日常から離れ、自分自身と向き合う特別な時間をお届けする美容室です。</p>
+            <p>「花が咲く」という意味を持つ店名には、お客様一人ひとりの魅力を引き出し、美しく咲かせたいという想いを込めています。</p>
+            <p>経験豊富なスタイリストが、お客様のライフスタイルやお悩みに寄り添い、最適なスタイルをご提案いたします。上質な空間で、心からリラックスできるひとときをお過ごしください。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section section--bg menu-section">
+      <div class="container">
+        <div class="section__title section__title--watermark">
+          <span class="section__title-watermark">Menu</span>
+          <span class="section__title-main">メニュー</span>
+        </div>
+        <div class="menu-list">
+          <div class="menu-card">
+            <div class="menu-card__image">
+              <img src="images/cut.jpeg" alt="Cut">
+            </div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__title">Cut</h3>
+              <div class="menu-card__item">
+                <span>カット</span>
+                <span class="menu-card__price">¥6,600</span>
+              </div>
+              <div class="menu-card__item">
+                <span>前髪カット</span>
+                <span class="menu-card__price">¥1,100</span>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-card__image">
+              <img src="images/color.jpeg" alt="Color">
+            </div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__title">Color</h3>
+              <div class="menu-card__item">
+                <span>カラー</span>
+                <span class="menu-card__price">¥8,800〜</span>
+              </div>
+              <div class="menu-card__item">
+                <span>リタッチ</span>
+                <span class="menu-card__price">¥6,600</span>
+              </div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-card__image">
+              <img src="images/treatment.jpeg" alt="Treatment">
+            </div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__title">Treatment</h3>
+              <div class="menu-card__item">
+                <span>トリートメント</span>
+                <span class="menu-card__price">¥3,300〜</span>
+              </div>
+              <div class="menu-card__item">
+                <span>ヘッドスパ</span>
+                <span class="menu-card__price">¥4,400〜</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="menu.html" class="btn">メニュー一覧を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section class="section staff-section">
+      <div class="container">
+        <div class="section__title section__title--watermark">
+          <span class="section__title-watermark">Staff</span>
+          <span class="section__title-main">スタッフ</span>
+        </div>
+        <div class="staff-list">
+          <div class="staff-card">
+            <div class="staff-card__image">
+              <img src="images/misa.jpeg" alt="伊藤 美彩">
+            </div>
+            <h3 class="staff-card__name">伊藤 美彩</h3>
+            <div class="staff-card__role-wrap">
+              <p class="staff-card__role">Owner / Stylist</p>
+              <div class="staff-card__sns">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+            <p class="staff-card__text">お客様の「なりたい自分」を一緒に見つけ、実現するお手伝いをいたします。</p>
+            <a href="reservation.html" class="btn btn--small">指名予約はこちら</a>
+          </div>
+          <div class="staff-card">
+            <div class="staff-card__image">
+              <img src="images/yui.jpeg" alt="佐藤 結衣">
+            </div>
+            <h3 class="staff-card__name">佐藤 結衣</h3>
+            <div class="staff-card__role-wrap">
+              <p class="staff-card__role">Stylist</p>
+              <div class="staff-card__sns">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+            <p class="staff-card__text">トレンドを取り入れながら、お客様に似合うスタイルをご提案します。</p>
+            <a href="reservation.html" class="btn btn--small">指名予約はこちら</a>
+          </div>
+          <div class="staff-card">
+            <div class="staff-card__image">
+              <img src="images/ai.jpeg" alt="鈴木 愛">
+            </div>
+            <h3 class="staff-card__name">鈴木 愛</h3>
+            <div class="staff-card__role-wrap">
+              <p class="staff-card__role">Stylist</p>
+              <div class="staff-card__sns">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+            <p class="staff-card__text">丁寧なカウンセリングで、お客様のお悩みを解決いたします。</p>
+            <a href="reservation.html" class="btn btn--small">指名予約はこちら</a>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="staff.html" class="btn">スタッフ紹介を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Access Section -->
+    <section class="section section--bg">
+      <div class="container">
+        <div class="section__title">
+          <span class="section__title-en">Access</span>
+          <span class="section__title-ja">アクセス</span>
+        </div>
+        <div class="access__content">
+          <div class="access__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.169449699498!2d139.70258131525882!3d35.67046098019432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca3c4e4e4e5%3A0x5c0e3c6e3c6e3c6e!2z5p2x5Lqs6YO95riL6LC35Yy656We5a6u5YmNMS0yLTM!5e0!3m2!1sja!2sjp!4v1234567890!5m2!1sja!2sjp" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="access__info">
+            <div class="access__item">
+              <span class="access__label">住所</span>
+              <span>東京都渋谷区神宮前1-2-3</span>
+            </div>
+            <div class="access__item">
+              <span class="access__label">営業時間</span>
+              <span>10:00〜20:00</span>
+            </div>
+            <div class="access__item">
+              <span class="access__label">定休日</span>
+              <span>毎週火曜日</span>
+            </div>
+            <div class="access__item">
+              <span class="access__label">電話番号</span>
+              <span><a href="tel:03-1234-5678">03-1234-5678</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__about">
+        <div class="footer__logo">Bloom</div>
+        <div class="footer__info">
+          <p>〒150-0001</p>
+          <p>東京都渋谷区神宮前1-2-3</p>
+          <p>TEL: 03-1234-5678</p>
+          <p>営業時間: 10:00〜20:00</p>
+          <p>定休日: 毎週火曜日</p>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <h3 class="footer__nav-title">Menu</h3>
+        <ul class="footer__nav-list">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="menu.html">メニュー・料金</a></li>
+          <li><a href="staff.html">スタッフ紹介</a></li>
+          <li><a href="access.html">アクセス</a></li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <h3 class="footer__nav-title">Follow Us</h3>
+        <div class="footer__sns">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="LINE">LINE</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer__copyright">&copy; 2024 Bloom Beauty Salon. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Hero Swiper
+    const heroSwiper = new Swiper('.hero-swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      speed: 800,
+      grabCursor: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+    });
+
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    const navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

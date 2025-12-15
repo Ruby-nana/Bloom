@@ -1,0 +1,1339 @@
+/* ===================================
+   Bloom - Beauty Salon Website
+   =================================== */
+
+/* CSS Variables */
+:root {
+  --color-main: #2D4A3E;
+  --color-main-light: #E8EFEB;
+  --color-sub: #E8EFEB;
+  --color-bg: #FFFEF7;
+  --color-accent: #B8956E;
+  --color-text: #333333;
+  --color-white: #FFFFFF;
+  --font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-top: 40px;
+  border: 1px solid var(--color-sub);
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===================================
+   Header
+   =================================== */
+.header {
+  margin-top: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--color-main);
+  letter-spacing: 0.1em;
+}
+
+.header__logo span {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-text);
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+/* Navigation */
+.nav__list {
+  display: flex;
+  gap: 30px;
+}
+
+.nav__link {
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after,
+.nav__link.active::after {
+  width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger__line {
+  width: 25px;
+  height: 2px;
+  background-color: var(--color-text);
+  transition: all 0.3s ease;
+}
+
+/* ===================================
+   Main Content
+   =================================== */
+main {
+  padding-top: 80px;
+}
+
+/* Section Common */
+.section {
+  padding: 80px 0;
+}
+
+.section--bg {
+  background-color: var(--color-sub);
+}
+
+.section__title {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-sub);
+  margin-bottom: 50px;
+}
+
+.section__title-en {
+  display: block;
+  font-size: 3.6rem;
+  color: var(--color-main);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.section__title-ja {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--color-text);
+  letter-spacing: 0.1em;
+  margin-bottom: 15px;
+}
+
+.section__title-ja::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-accent);
+  margin: 15px auto 0;
+}
+
+/* ===================================
+   Hero Section
+   =================================== */
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  background-color: var(--color-main-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__content {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-sub);
+  z-index: 10;
+  position: relative;
+}
+
+.hero__title {
+  font-size: 6rem;
+  color: var(--color-white);
+  letter-spacing: 0.15em;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero__subtitle {
+  font-size: 1.8rem;
+  color: var(--color-white);
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Swiper */
+.hero-swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-swiper .swiper-slide {
+  overflow: hidden;
+}
+
+.hero-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===================================
+   Button
+   =================================== */
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  border: 2px solid var(--color-main);
+  background-color: var(--color-main);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.btn--primary {
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn--small {
+  padding: 12px 28px;
+  font-size: 1.4rem;
+}
+
+/* ===================================
+   Concept Section
+   =================================== */
+.concept-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Watermark Title Style */
+.section__title--watermark {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.section__title-watermark {
+  display: block;
+  font-family: 'Pinyon Script', cursive;
+  font-size: 14rem;
+  font-weight: 400;
+  color: #E8EFEB;
+  letter-spacing: 0.02em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* 背景色があるセクション用のウォーターマーク */
+.section--bg .section__title-watermark {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.section__title-main {
+  display: block;
+  font-size: 2.4rem;
+  color: var(--color-main);
+  letter-spacing: 0.3em;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-sub);
+}
+
+.section__title-main::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: var(--color-accent);
+  margin: 20px auto 0;
+}
+
+.concept__content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.concept__image {
+  flex: 1;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.concept__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.concept__image:hover img {
+  transform: scale(1.03);
+}
+
+.concept__text {
+  flex: 1;
+}
+
+.concept__text p {
+  margin-bottom: 20px;
+  line-height: 2;
+}
+
+/* ===================================
+   Menu Section
+   =================================== */
+.menu-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.menu-card {
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.menu-card__image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.menu-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-card__image img {
+  transform: scale(1.08);
+}
+
+.menu-card__body {
+  padding: 25px 30px 30px;
+}
+
+.menu-card__title {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: var(--color-main);
+  margin-bottom: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-sub);
+}
+
+.menu-card__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px dotted #ddd;
+}
+
+.menu-card__item:last-child {
+  border-bottom: none;
+}
+
+.menu-card__price {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ===================================
+   Staff Section
+   =================================== */
+.staff-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.staff-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.staff-card {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-sub);
+}
+
+.staff-card__image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--color-sub);
+  margin: 0 auto 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.staff-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.staff-card:hover .staff-card__image {
+  transform: scale(1.05);
+}
+
+.staff-card__name {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.staff-card__role-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.staff-card__role {
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+}
+
+.staff-card__sns {
+  display: flex;
+  gap: 8px;
+}
+
+.staff-card__sns a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.staff-card__sns a:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.staff-card__text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.staff-card .btn {
+  margin-top: auto;
+}
+
+/* ===================================
+   Access Section
+   =================================== */
+.access__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.access__map {
+  background-color: var(--color-sub);
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-main);
+}
+
+.access__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.access__info {
+  padding: 20px 0;
+}
+
+.access__item {
+  display: flex;
+  gap: 20px;
+  padding: 15px 0;
+}
+
+.access__label {
+  min-width: 100px;
+  color: var(--color-main);
+  font-weight: 600;
+}
+
+/* ===================================
+   Footer
+   =================================== */
+.footer {
+  background-color: #4A6B5D;
+  color: var(--color-white);
+  padding: 60px 0 30px;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer__logo {
+  font-size: 2.4rem;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.footer__info p {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.footer__nav-title {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: var(--color-accent);
+}
+
+.footer__nav-list a {
+  color: var(--color-white);
+  font-size: 1.4rem;
+  opacity: 0.8;
+  display: block;
+  padding: 5px 0;
+}
+
+.footer__nav-list a:hover {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+.footer__sns {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer__sns a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.footer__sns a:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.footer__copyright {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-sub);
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+/* ===================================
+   Page Header
+   =================================== */
+.page-header {
+  background-color: var(--color-sub);
+  padding: 100px 0 60px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-sub);
+  text-align: center;
+}
+
+.page-header__title {
+  font-size: 4rem;
+  color: var(--color-main);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.page-header__subtitle {
+  font-size: 1.4rem;
+  color: var(--color-text);
+  letter-spacing: 0.1em;
+}
+
+.page-header__subtitle::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-accent);
+  margin: 15px auto 0;
+}
+
+/* ===================================
+   Placeholder
+   =================================== */
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-sub);
+  color: var(--color-main);
+  font-size: 1.4rem;
+}
+
+/* ===================================
+   Responsive
+   =================================== */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  /* Header */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    margin-top: 40px;
+    padding: 80px 30px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav__link {
+    display: block;
+    padding: 15px 0;
+  }
+
+  /* Hamburger Active */
+  .hamburger.active .hamburger__line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .hamburger.active .hamburger__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .hamburger__line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* Hero */
+  .hero__title {
+    font-size: 4rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.4rem;
+  }
+
+  /* Section */
+  .section {
+    padding: 60px 0;
+  }
+
+  .section__title-en {
+    font-size: 2.8rem;
+  }
+
+  /* Concept */
+  .section__title-watermark {
+    font-size: 7rem;
+  }
+
+  .section__title-main {
+    font-size: 1.8rem;
+  }
+
+  .concept__content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Access */
+  .access__content {
+    grid-template-columns: 1fr;
+  }
+
+  /* Page Header */
+  .page-header {
+    padding: 80px 0 40px;
+  }
+
+  .page-header__title {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menu-list {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================================
+   Reservation Page
+   =================================== */
+
+/* Step Navigation */
+.reservation-steps {
+  margin-top: 40px;
+  padding: 30px 0;
+  margin-top: 80px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  max-width: 160px;
+}
+
+.steps__item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 60%;
+  width: 80%;
+  height: 2px;
+  background-color: #ddd;
+}
+
+.steps__item--active:not(:last-child)::after {
+  background-color: var(--color-accent);
+}
+
+.steps__number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.steps__item--active .steps__number {
+  background-color: var(--color-accent);
+}
+
+.steps__label {
+  font-size: 1.2rem;
+  color: #999;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-sub);
+}
+
+.steps__item--active .steps__label {
+  color: var(--color-main);
+  font-weight: 500;
+}
+
+/* Reservation Content */
+.reservation-content {
+  padding: 60px 0;
+  min-height: calc(100vh - 400px);
+}
+
+.reservation-header {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-sub);
+  margin-bottom: 50px;
+}
+
+.reservation-title {
+  font-size: 2.4rem;
+  color: var(--color-main);
+  margin-bottom: 15px;
+}
+
+.reservation-note {
+  font-size: 1.3rem;
+  color: #888;
+}
+
+/* Menu Categories */
+.menu-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.menu-category {
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.menu-category:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-category__title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 25px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-category__title:hover {
+  background-color: var(--color-sub);
+}
+
+.menu-category__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.menu-category__toggle {
+  margin-left: auto;
+  color: #999;
+  transition: transform 0.3s ease;
+}
+
+.menu-category.is-open .menu-category__toggle {
+  transform: rotate(180deg);
+}
+
+/* Menu Category Content */
+.menu-category__content {
+  padding: 15px 25px 25px;
+}
+
+/* Menu Item */
+.menu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  margin-top: 40px;
+  border: 1px solid var(--color-sub);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.menu-item:last-child {
+  margin-bottom: 0;
+}
+
+.menu-item:hover {
+  background-color: var(--color-sub);
+}
+
+.menu-item:has(.menu-item__checkbox:checked) {
+  border-color: var(--color-accent);
+  background-color: #fdfbf5;
+}
+
+.menu-item__checkbox {
+  width: 22px;
+  height: 22px;
+  margin-top: 3px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.menu-item__info {
+  flex: 1;
+}
+
+.menu-item__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.menu-item__name {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.menu-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.menu-item__price {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.menu-item__time {
+  font-size: 1.3rem;
+  color: #888;
+}
+
+.menu-item__badge {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  background-color: #ffeaea;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.menu-item__desc {
+  font-size: 1.3rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Disabled Menu Item */
+.menu-item--disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.menu-item--disabled:hover {
+  margin-top: 40px;
+  border: 1px solid var(--color-sub);
+}
+
+.menu-item--disabled .menu-item__name {
+  color: #999;
+}
+
+/* Reservation Responsive */
+@media screen and (max-width: 768px) {
+  .steps {
+    gap: 0;
+  }
+
+  .steps__item {
+    max-width: 100px;
+  }
+
+  .steps__item:not(:last-child)::after {
+    width: 60%;
+    left: 65%;
+  }
+
+  .steps__number {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+
+  .steps__label {
+    font-size: 1rem;
+  }
+
+  .reservation-title {
+    font-size: 1.8rem;
+  }
+
+  .menu-category__title {
+    padding: 15px 20px;
+    font-size: 1.5rem;
+  }
+
+  .menu-category__icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1.4rem;
+  }
+
+  .menu-category__content {
+    padding: 15px 15px 20px;
+  }
+
+  .menu-item {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .menu-item__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .menu-item__meta {
+    margin-left: 0;
+  }
+
+  .menu-item__name {
+    font-size: 1.5rem;
+  }
+
+  .menu-item__price {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .steps__label {
+    font-size: 0.9rem;
+  }
+
+  .steps__item {
+    max-width: 70px;
+  }
+
+  .reservation-content {
+    padding: 40px 0;
+  }
+}
+
+
+/* ===================================
+   Reservation Summary
+   =================================== */
+.reservation-summary {
+  margin-top: 50px;
+  padding-bottom: 60px;
+}
+
+.reservation-summary__title {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  margin-bottom: 15px;
+}
+
+.reservation-summary__selected {
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.reservation-summary__label {
+  display: inline-block;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.reservation-summary__items {
+  min-height: 40px;
+}
+
+.reservation-summary__empty {
+  color: #999;
+  font-size: 1.3rem;
+}
+
+.reservation-summary__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.reservation-summary__total-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.reservation-summary__total-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.reservation-summary__total-note {
+  font-size: 1.1rem;
+  color: #888;
+}
+
+.reservation-summary__total-right {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.reservation-summary__price {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.reservation-summary__time {
+  font-size: 1.6rem;
+  color: var(--color-text);
+}
+
+.reservation-summary__buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn--outline {
+  background-color: var(--color-white);
+  color: var(--color-text);
+  border: 1px solid #ccc;
+  padding: 15px 40px;
+  font-size: 1.4rem;
+  min-width: 150px;
+  text-align: center;
+}
+
+.btn--outline:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+.btn--primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.4rem;
+  min-width: 200px;
+  text-align: center;
+}
+
+.btn--primary:hover {
+  opacity: 0.9;
+}
+
+/* Reservation Summary Responsive */
+@media screen and (max-width: 768px) {
+  .reservation-summary {
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .reservation-summary__title {
+    font-size: 1.4rem;
+  }
+
+  .reservation-summary__total {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reservation-summary__total-right {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .reservation-summary__buttons {
+    flex-direction: column;
+  }
+
+  .btn--outline,
+  .btn--primary {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* ===================================
+   Reservation Page - Header Not Fixed
+   =================================== */
+body.reservation-page .header {
+  position: static;
+}
+
+body.reservation-page main {
+  padding-top: 0;
+}

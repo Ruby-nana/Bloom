@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bloom（ブルーム）の予約ページ。メニューを選択して簡単にご予約いただけます。">
+  <title>予約 - メニュー選択 | Bloom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="reservation-page">
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        Bloom
+        <span>Beauty Salon</span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">ホーム</a></li>
+          <li><a href="menu.html" class="nav__link">メニュー</a></li>
+          <li><a href="staff.html" class="nav__link">スタッフ</a></li>
+          <li><a href="access.html" class="nav__link">アクセス</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Step Navigation -->
+    <section class="reservation-steps">
+      <div class="container">
+        <ol class="steps">
+          <li class="steps__item steps__item--active">
+            <span class="steps__number">1</span>
+            <span class="steps__label">メニュー選択</span>
+          </li>
+          <li class="steps__item">
+            <span class="steps__number">2</span>
+            <span class="steps__label">日時指定</span>
+          </li>
+          <li class="steps__item">
+            <span class="steps__number">3</span>
+            <span class="steps__label">情報入力</span>
+          </li>
+          <li class="steps__item">
+            <span class="steps__number">4</span>
+            <span class="steps__label">予約確認</span>
+          </li>
+          <li class="steps__item">
+            <span class="steps__number">5</span>
+            <span class="steps__label">予約完了</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Menu Selection -->
+    <section class="reservation-content">
+      <div class="container">
+        <div class="reservation-header">
+          <h1 class="reservation-title">メニューを選択してください</h1>
+          <p class="reservation-note">※所要時間は目安です。混雑具合などにより、多少異なる場合があります。</p>
+        </div>
+
+        <div class="menu-categories">
+          <div class="menu-category">
+            <h2 class="menu-category__title">
+              <span class="menu-category__icon"><i class="fa-solid fa-scissors"></i></span>
+              カット
+              <span class="menu-category__toggle"><i class="fa-solid fa-chevron-down"></i></span>
+            </h2>
+            <div class="menu-category__content">
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">メンズカット</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥6,600</span>
+                      <span class="menu-item__time">/ 59分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">眉カット御希望の方はお声がけください。（別途¥1,100頂きます）<br>会計時学生20%引き（中学生〜高校生）<br>※シャンプーブロー込 ※キッズカット要相談</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">レディースカット</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥6,600</span>
+                      <span class="menu-item__time">/ 89分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">会計時学生20%引き（中学生〜高校生）<br>※シャンプーブロー込 ※キッズカット要相談</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">カット＋眉カット</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥7,700</span>
+                      <span class="menu-item__time">/ 59分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">会計時学生20%引き（中学生〜高校生）<br>※シャンプーブロー込</p>
+                </div>
+              </label>
+
+              <label class="menu-item menu-item--disabled">
+                <input type="checkbox" class="menu-item__checkbox" disabled>
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">前髪カット</span>
+                    <span class="menu-item__badge">ネット予約対象外</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥1,100</span>
+                      <span class="menu-item__time">/ 15分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">※電話のみのご予約になります</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="menu-category">
+            <h2 class="menu-category__title">
+              <span class="menu-category__icon"><i class="fa-solid fa-palette"></i></span>
+              カラー
+              <span class="menu-category__toggle"><i class="fa-solid fa-chevron-down"></i></span>
+            </h2>
+            <div class="menu-category__content">
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">フルカラー</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥9,900〜</span>
+                      <span class="menu-item__time">/ 105分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">・ロング料金1,100円〜<br>※シャンプーブロー込<br>※黒染め、セルフカラー後のトーンアップ、カラーリング要相談<br>※ブリーチ無しのシングルカラーの料金時間設定になっております。</p>
+                </div>
+              </label>
+
+              <label class="menu-item menu-item--disabled">
+                <input type="checkbox" class="menu-item__checkbox" disabled>
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">セクションカラー</span>
+                    <span class="menu-item__badge">ネット予約対象外</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥3,000〜</span>
+                      <span class="menu-item__time">/ 30分</span>
+                    </span>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="menu-category">
+            <h2 class="menu-category__title">
+              <span class="menu-category__icon"><i class="fa-solid fa-wind"></i></span>
+              パーマ
+              <span class="menu-category__toggle"><i class="fa-solid fa-chevron-down"></i></span>
+            </h2>
+            <div class="menu-category__content">
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">ダウンパーマ</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥4,400</span>
+                      <span class="menu-item__time">/ 15分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">ボリュームを抑えるパーマ<br>※単品予約不可（他メニューに追加して御予約お願い致します）<br>※シャンプーブロー込<br>※ブリーチ毛不可 ※ダメージベース要相談</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">根元パーマ</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥4,400</span>
+                      <span class="menu-item__time">/ 15分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">立ち上がり、ボリュームを出すパーマ<br>※単品予約不可（他メニューに追加して御予約お願い致します）<br>※シャンプーブロー込<br>※ブリーチ毛不可 ※ダメージベース要相談</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="menu-category">
+            <h2 class="menu-category__title">
+              <span class="menu-category__icon"><i class="fa-solid fa-layer-group"></i></span>
+              組み合わせメニュー
+              <span class="menu-category__toggle"><i class="fa-solid fa-chevron-down"></i></span>
+            </h2>
+            <div class="menu-category__content">
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">指名限定　迷ったらこちら！お任せメニュー</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥16,500</span>
+                      <span class="menu-item__time">/ 120分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">カット以外も興味はあるけど...とお悩みの方向けメニューです<br>カウンセリングの上で髪に応じて必要なメニュー(カラー、パーマ、ダウンパーマ、根本パーマ)を提案させていただきます<br>※ブリーチ、パーマ+カラー、縮毛矯正等のロングメニューは対応しておりません</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">HIROTO指名限定　カット+スタイリング講習</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥14,300</span>
+                      <span class="menu-item__time">/ 120分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">カット+お伝えしながらご自身で実際にスタイリングしていただき、再現性を上げ楽に良くしていただくためのメニューとなります<br>男女OKで不慣れな方にはもちろん、こうしたいがある方も叶えます<br>カット1h、講習1hのスケジュールでみっちりお伝えします！</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">メンズカット＋15分スパ（肩マッサージ付き）</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥9,900</span>
+                      <span class="menu-item__time">/ 74分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">カットと15分のヘッドスパ付きメニューです。<br>※シャンプーブロー代込み</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">レディースカット＋15分ヘッドスパ（肩マッサージ付き）</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥9,900</span>
+                      <span class="menu-item__time">/ 104分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">カットと15分のヘッドスパのコースとなります。<br>※シャンプーブロー代込み</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">メンズカット＋カラー</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥14,300〜</span>
+                      <span class="menu-item__time">/ 104分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">・ロング料金1,100円〜<br>※黒染め、セルフカラー後のトーンアップ、カラーリング要相談</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">レディースカット＋カラー</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥14,300〜</span>
+                      <span class="menu-item__time">/ 149分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">・ロング料金1,100円〜<br>※黒染め、セルフカラー後のトーンアップ、カラーリング要相談</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">カット＋ダブルカラー</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥22,000〜</span>
+                      <span class="menu-item__time">/ 240分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">カット＋ブリーチ＋オンカラー<br>・ロング料金1,100円〜<br>・追いブリーチ6,600円〜<br>・ケアブリーチ3,000円<br>※ダメージベース要相談 ※黒染め後、市販カラー後要相談</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">カット＋ハイライト</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥27,500〜</span>
+                      <span class="menu-item__time">/ 210分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">カット＋ブリーチを使ったハイライト＋オンカラー<br>・ロング料金1,100円〜<br>・追いブリーチ6,600円〜<br>・ケアブリーチ3,000円<br>※ダメージベース要相談 ※黒染め後、市販カラー後要相談</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">カット＋デザイン（ポイント）カラー</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥19,800〜</span>
+                      <span class="menu-item__time">/ 180分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">カット＋ブリーチを使ったデザインカラー（部分的）<br>《インナー、イヤリング、グラデーション等はこちらのメニューをお選び下さい》<br>・ロング料金1,100円〜<br>・追いブリーチ6,600円〜<br>・ケアブリーチ3,000円<br>※ダメージベース要相談 ※黒染め後、市販カラー後要相談</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">カット＋パーマ</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥15,400</span>
+                      <span class="menu-item__time">/ 120分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">カット＋パーマ（特殊パーマ含む）<br>※ブリーチ毛不可 ※ダメージベース要相談</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">カット＋ダウンパーマ</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥11,000</span>
+                      <span class="menu-item__time">/ 75分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">カットとダウンパーマのメニューとなります。<br>※シャンプーブロー代込み</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">カット＋根元パーマ</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥11,000</span>
+                      <span class="menu-item__time">/ 90分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">カットと根元パーマのメニューになります。<br>※シャンプーブロー代込み</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">カット＋ケアパーマ</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥18,700</span>
+                      <span class="menu-item__time">/ 150分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">ブリーチ毛やハイダメージ毛の方へのパーマメニューとなります。（毛髪の状態によっては施術をお断りする場合がございます）<br>※シャンプーブロー代込み</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">カット＋縮毛矯正（男性）</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥19,800</span>
+                      <span class="menu-item__time">/ 180分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">※ブリーチ毛不可 ※ダメージベース要相談</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">カット＋縮毛矯正（女性）</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥24,200</span>
+                      <span class="menu-item__time">/ 210分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">・ロング料金1,100円〜<br>※ブリーチ毛不可 ※ダメージベース要相談</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">カット＋髪質改善ストレート</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥27,000</span>
+                      <span class="menu-item__time">/ 210分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">ブリーチ毛や、ハイダメージ毛にもかけることの出来るダメージレス、仕上がりもなめらかな縮毛矯正です。<br>ご来店時のカウンセリング、髪の状態によって通常の縮毛矯正とどちらが適切かご相談させていただくのでお気軽にご予約ください。</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">前髪縮毛矯正＋カット</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥13,000〜</span>
+                      <span class="menu-item__time">/ 120分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">※サイド等を縮毛矯正する場合は全体の縮毛矯正の料金を頂きます。<br>※ブリーチ毛不可<br>※ダメージベース要相談</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="menu-category">
+            <h2 class="menu-category__title">
+              <span class="menu-category__icon"><i class="fa-solid fa-droplet"></i></span>
+              トリートメント
+              <span class="menu-category__toggle"><i class="fa-solid fa-chevron-down"></i></span>
+            </h2>
+            <div class="menu-category__content">
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">トリートメント（ノーマル）</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥6,600</span>
+                      <span class="menu-item__time">/ 60分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">※シャンプーブロー代込</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">トリートメント（アドバンス）</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥9,900</span>
+                      <span class="menu-item__time">/ 45分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">※シャンプーブロー代込</p>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">（癖を伸ばさず綺麗にしたい方へ）髪質改善トリートメント</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥11,000</span>
+                      <span class="menu-item__time">/ 90分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">話題沸騰の髪質改善トリートメントメニュー<br>癖は伸びずに、収まりが良くなるイメージとなります。<br>癖を伸ばしたいお客様は、髪質改善ストレートのメニューをお選びください。</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="menu-category">
+            <h2 class="menu-category__title">
+              <span class="menu-category__icon"><i class="fa-solid fa-spa"></i></span>
+              ヘッドスパ
+              <span class="menu-category__toggle"><i class="fa-solid fa-chevron-down"></i></span>
+            </h2>
+            <div class="menu-category__content">
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">15分ヘッドスパ＋肩マッサージ</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥3,300〜</span>
+                      <span class="menu-item__time">/ 45分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">15分のヘッドスパと簡単な肩のマッサージ付きのメニューです。<br>単品のご予約の場合、別でシャンプーブロー代3,300円を頂戴しております。</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="menu-category">
+            <h2 class="menu-category__title">
+              <span class="menu-category__icon"><i class="fa-solid fa-plus"></i></span>
+              その他
+              <span class="menu-category__toggle"><i class="fa-solid fa-chevron-down"></i></span>
+            </h2>
+            <div class="menu-category__content">
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">シャンプー・ブロー</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥3,300</span>
+                      <span class="menu-item__time">/ 30分</span>
+                    </span>
+                  </div>
+                </div>
+              </label>
+
+              <label class="menu-item">
+                <input type="checkbox" class="menu-item__checkbox">
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">『追加メニュー』会話なし</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥0</span>
+                      <span class="menu-item__time">/ 1分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">施術に必要なカウンセリングのみを御希望の方はこちらのメニューの追加をお願い致します。</p>
+                </div>
+              </label>
+
+              <label class="menu-item menu-item--disabled">
+                <input type="checkbox" class="menu-item__checkbox" disabled>
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">【キャンセルポリシー】</span>
+                    <span class="menu-item__badge">ネット予約対象外</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">要問合せ</span>
+                      <span class="menu-item__time">/ 30分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">5分以上の遅れは必ずご連絡ください。当店では10分以上の施術の遅れは当店都合で御予約をお断りさせて頂く場合が有ります。御連絡が無い無断キャンセルは例外無く予約時のメニュー料金の全額を口座振込にて対応させて頂きます。<br>※下記にネット予約対象外と記載が有りますが、システムの都合上その様な表示になっています。当店では全メニューにキャンセルポリシーは適応されていますので御理解の程宜しくお願い致します。</p>
+                </div>
+              </label>
+
+              <label class="menu-item menu-item--disabled">
+                <input type="checkbox" class="menu-item__checkbox" disabled>
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">※当店のメニューは全て税込の価格になります。</span>
+                    <span class="menu-item__badge">ネット予約対象外</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">要問合せ</span>
+                      <span class="menu-item__time">/ 30分</span>
+                    </span>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="menu-category">
+            <h2 class="menu-category__title">
+              <span class="menu-category__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+              ヘアセット
+              <span class="menu-category__toggle"><i class="fa-solid fa-chevron-down"></i></span>
+            </h2>
+            <div class="menu-category__content">
+              <label class="menu-item menu-item--disabled">
+                <input type="checkbox" class="menu-item__checkbox" disabled>
+                <div class="menu-item__info">
+                  <div class="menu-item__header">
+                    <span class="menu-item__name">セット/スタイリング</span>
+                    <span class="menu-item__badge">ネット予約対象外</span>
+                    <span class="menu-item__meta">
+                      <span class="menu-item__price">¥3,300</span>
+                      <span class="menu-item__time">/ 30分</span>
+                    </span>
+                  </div>
+                  <p class="menu-item__desc">※事前相談必須のため電話予約のみ</p>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selected Menu Confirmation -->
+        <div class="reservation-summary">
+          <h3 class="reservation-summary__title">選択済みメニューを確認してください</h3>
+
+          <div class="reservation-summary__selected">
+            <span class="reservation-summary__label">選択済み</span>
+            <div class="reservation-summary__items">
+              <p class="reservation-summary__empty">メニューが選択されていません</p>
+            </div>
+          </div>
+
+          <div class="reservation-summary__total">
+            <div class="reservation-summary__total-left">
+              <span class="reservation-summary__total-label">合計</span>
+              <span class="reservation-summary__total-note">※実際のお支払い金額と異なる場合があります。</span>
+            </div>
+            <div class="reservation-summary__total-right">
+              <span class="reservation-summary__price">¥0</span>
+              <span class="reservation-summary__time">0分</span>
+            </div>
+          </div>
+
+          <div class="reservation-summary__buttons">
+            <a href="index.html" class="btn btn--outline">戻る</a>
+            <a href="#" class="btn btn--primary">この内容で次へ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__about">
+        <div class="footer__logo">Bloom</div>
+        <div class="footer__info">
+          <p>〒150-0001</p>
+          <p>東京都渋谷区神宮前1-2-3</p>
+          <p>TEL: 03-1234-5678</p>
+          <p>営業時間: 10:00〜20:00</p>
+          <p>定休日: 毎週火曜日</p>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <h3 class="footer__nav-title">Menu</h3>
+        <ul class="footer__nav-list">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="menu.html">メニュー・料金</a></li>
+          <li><a href="staff.html">スタッフ紹介</a></li>
+          <li><a href="access.html">アクセス</a></li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <h3 class="footer__nav-title">Follow Us</h3>
+        <div class="footer__sns">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="LINE">LINE</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer__copyright">&copy; 2024 Bloom Beauty Salon. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    const navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+      });
+    });
+
+    // Category Toggle
+    const categoryTitles = document.querySelectorAll('.menu-category__title');
+    categoryTitles.forEach(title => {
+      title.addEventListener('click', () => {
+        const category = title.parentElement;
+        const content = category.querySelector('.menu-category__content');
+        const toggle = title.querySelector('.menu-category__toggle i');
+
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        toggle.classList.toggle('fa-chevron-down');
+        toggle.classList.toggle('fa-chevron-up');
+      });
+    });
+
+    // Menu Selection
+    const checkboxes = document.querySelectorAll('.menu-item__checkbox:not([disabled])');
+    const selectedItemsContainer = document.querySelector('.reservation-summary__items');
+    const totalPriceElement = document.querySelector('.reservation-summary__price');
+    const totalTimeElement = document.querySelector('.reservation-summary__time');
+
+    let selectedMenus = [];
+
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', (e) => {
+        const menuItem = e.target.closest('.menu-item');
+        const menuName = menuItem.querySelector('.menu-item__name').textContent;
+        const menuPriceText = menuItem.querySelector('.menu-item__price').textContent;
+        const menuTimeText = menuItem.querySelector('.menu-item__time').textContent;
+
+        // 価格を数値に変換（¥と〜を除去してカンマを削除）
+        const priceMatch = menuPriceText.replace(/[¥,]/g, '').match(/\d+/);
+        const price = priceMatch ? parseInt(priceMatch[0]) : 0;
+
+        // 時間を数値に変換（分を抽出）
+        const timeMatch = menuTimeText.match(/\d+/);
+        const time = timeMatch ? parseInt(timeMatch[0]) : 0;
+
+        if (e.target.checked) {
+          // メニューを追加
+          selectedMenus.push({
+            name: menuName,
+            price: price,
+            priceText: menuPriceText,
+            time: time,
+            timeText: menuTimeText
+          });
+        } else {
+          // メニューを削除
+          selectedMenus = selectedMenus.filter(menu => menu.name !== menuName);
+        }
+
+        updateSummary();
+      });
+    });
+
+    function updateSummary() {
+      // 選択済みメニューの表示を更新
+      if (selectedMenus.length === 0) {
+        selectedItemsContainer.innerHTML = '<p class="reservation-summary__empty">メニューが選択されていません</p>';
+      } else {
+        selectedItemsContainer.innerHTML = selectedMenus.map(menu => `
+          <div class="reservation-summary__item">
+            <span class="reservation-summary__item-name">${menu.name}</span>
+            <span class="reservation-summary__item-meta">
+              <span class="reservation-summary__item-price">${menu.priceText}</span>
+              <span class="reservation-summary__item-time">${menu.timeText}</span>
+            </span>
+          </div>
+        `).join('');
+      }
+
+      // 合計金額と時間を計算
+      const totalPrice = selectedMenus.reduce((sum, menu) => sum + menu.price, 0);
+      const totalTime = selectedMenus.reduce((sum, menu) => sum + menu.time, 0);
+
+      // 合計を表示（¥0〜のような価格がある場合は「〜」を表示）
+      const hasPriceRange = selectedMenus.some(menu => menu.priceText.includes('〜'));
+      totalPriceElement.textContent = hasPriceRange ? `¥${totalPrice.toLocaleString()}〜` : `¥${totalPrice.toLocaleString()}`;
+      totalTimeElement.textContent = `${totalTime}分`;
+    }
+  </script>
+</body>
+</html>
